@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this's title</title>
+</head>
+<body>
+  <!-- element-Phần tử: bắt đầu bằng 1 thẻ mở -> nội dung -> thẻ đóng -->
+  <!-- <h1>đây là 1 element</h1> -->
+  <!-- tên thẻ thì chữ hoa chữ thường đều như nhau: h1 ~ H1 -->
+
+  <!-- Thuộc tính -->
+  <!-- Thẻ h1,h2,...h6 -->
+  <!-- Mỗi trang chỉ có 1 thẻ h1 dùng làm tiêu đề của trang, tốt cho seo -->
+  <!-- SEO (Search Engine Optimization) là Tối ưu hóa Công cụ Tìm kiếm, một tập hợp các kỹ thuật và chiến lược nhằm cải thiện
+  thứ hạng của một trang web trên các công cụ tìm kiếm như Google, Bing, hoặc Yahoo. Khi trang web của bạn được tối ưu
+  hóa tốt, nó sẽ dễ dàng xuất hiện trên các kết quả tìm kiếm hàng đầu, giúp thu hút nhiều người truy cập hơn. -->
+
+  <!-- thẻ div: dùng để nhóm các phần tử lại với nhau -->
+
+  <!-- Thẻ <p></p>:  Tạo văn bản - thẻ block-->
+  <!-- Thẻ <hr> -->
+  <!-- Thẻ <br> -->
+
+  <!-- thuộc tính dùng chung -->
+  <!-- -- title: mô tả cho element -->
+
+  <!-- Thẻ format: <br>
+    - <b>in đậm</b>, <strong note="kQtr">in đậm và quan trọng</strong><br>
+    - <i>in nghiêng</i>, <em note="kQtr">in nghiêng và quan trọng</em><br>
+    - <small>chữ nhỏ</small><br>
+    - sub: chỉ số dưới - H<sub>2</sub>SO<sub>4</sub><br>
+    - sup: chỉ số trên - x<sup>2</sup><br>
+    - ins: thẻ gạch dưới - <ins>ins</ins><br>
+    - del: thẻ gạch ngang - <del title="title">del</del><br>
+    - mark: thẻ đánh dấu - <mark>mark</mark>
+    - marquee <marquee scrollamount="10" direction="right">123123</mark></marquee> -->
+  <!-- Thẻ a<br>
+    <a href="https://www.google.com.vn/" target="_blank">link - target blank mở sang tab mới</a><br>
+    <a href="https://www.google.com.vn/" target="_self">link - target self mở đè lên tab hiện tại</a><br> -->
+
+  <!-- Thẻ img, đường dẫn, kết hợp a+img -->
+  <!-- Đường dẫn tuyệt đối
+      <img src="https://media.istockphoto.com/id/1648827349/vi/anh/hoa-v%C4%83n-g%E1%BB%97.jpg?s=1024x1024&w=is&k=20&c=0qEJvvFMBbJ_smmF-0ek-S7V9RoOYiyNELto1xqgR30=" alt=""> -->
+  <!-- Đường dẫn tương đối
+      <img src="image/image.png" alt="alt" width="200">
+      <img src="./image/image.png" alt="">
+      <img src="../HTML_BIN/image.png" alt="alt">
+      <img src="/HTML/image/image.png" alt=""> Đường dẫn tương đối với gốc -->
+  <!-- Kết hợp a+img -->
+  <!-- <a href="https://www.google.com.vn/"><img src="image/image.png" alt=""></a> -->
+
+  <!-- Thẻ video -->
+  <!-- <video width="200" controls loop autoplay muted poster="image/image.png">
+      <source src="video/nger.mp4" type="video/mp4">
+    </video>
+    -- width/height
+    -- poster: hiện poster video khi chưa phát
+    -- controls
+    -- loop
+    -- autoplay+muted thì mới tự động phát đc
+    -- type: mp4, ogg, webm -->
+
+  <!-- Thẻ audio tương tự thẻ video -->
+  <!-- <audio controls ><source src ="audio/nger_mp3.mp3"></audio> -->
+
+  <!-- thẻ ul,ol -->
+  <!-- <ul>
+    <li>muc 1</li>
+    <li>muc 2</li>
+  </ul>
+
+  <ol type="" start="3" reversed>
+    <li>muc 1</li>
+    <li>muc 2</li>
+    <li>muc 3</li>
+    <li>muc 4</li>
+  </ol> -->
+
+  <!-- Thẻ table -->
+  <!-- <style>
+    table, td, th{
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+  </style>
+  <table>
+    <thead>
+      <tr>
+        <th>stt</th>
+        <th>ten</th>
+        <th>msv</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>nguyen a</td>
+        <td>123</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>nguyen b</td>
+        <td>456</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table style = "margin-top: 30px;">
+    <thead>
+      <tr>
+        <th>thuộc tính</th>
+        <th>loại</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="6">thông tin</td>
+        <td colspan="2">ô trống</td>
+      </tr>
+      <tr>
+        <td rowspan="2">tên</td>
+        <td>2</td>
+      </tr>
+      <tr><td>3</td></tr>
+      <tr>
+        <td rowspan="3">tuổi</td>
+        <td>4</td>
+      </tr>
+      <tr><td>5</td></tr>
+      <tr><td>6</td></tr>
+
+    </tbody>
+  </table> -->
+
+  <!-- Thẻ inline và block -->
+  <!-- -- block: bắt đầu trên 1 dòng mới, chiếm full chiều rộng có sẵn <br>
+  -- inline: không bắt đầu trên 1 dòng mới, chiều rộng bằng chiều rộng của element
+  -- block chứa inline, block còn inline thì không
+  -- ngoại lệ thẻ a có thể chứa block
+  -- https://www.w3schools.com/Html/html_blocks.asp -->
+
+  <!-- thẻ iframe -->
+  <!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@.just__1997/video/7455693018109119790"
+    data-video-id="7455693018109119790" style="max-width: 605px;min-width: 325px;">
+    <section> <a target="_blank" title="@.just__1997"
+        href="https://www.tiktok.com/@.just__1997?refer=embed">@.just__1997</a> Busquets &gt; Rodri 💀 <a
+        title="football" target="_blank" href="https://www.tiktok.com/tag/football?refer=embed">#football</a> <a
+        title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="busquets🇪🇸👑"
+        target="_blank"
+        href="https://www.tiktok.com/tag/busquets%F0%9F%87%AA%F0%9F%87%B8%F0%9F%91%91?refer=embed">#busquets🇪🇸👑</a>
+      <a target="_blank" title="♬ Eu Sento Gabu! - Slowed - PXLWYSE"
+        href="https://www.tiktok.com/music/Eu-Sento-Gabu-Slowed-7358093655477192721?refer=embed">♬ Eu Sento Gabu! -
+        Slowed - PXLWYSE</a> </section>
+  </blockquote>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+
+  <iframe src="https://dantri.com.vn/" name="baodantri" width="600px" height="700px"></iframe>
+  <a href="https://thanhnien.vn/" target="baodantri">the a</a> -->
+
+  <!-- thẻ form -->
+  <!-- method = post/get -->
+  <!-- autocomplete mặc định là on -->
+  <!-- readonly: chỉ đọc, vẫn gửi lên đc server -->
+  <!-- disabled: chỉ hiển thị, k gửi lên được server -->
+  <!-- maxlength: số lượng tối đa được phép nhập -->
+  <!-- min, max: áp dụng cho input number, min max của number đó  -->
+  <!-- placeholder, required: ko đc để trống -->
+
+  <!-- <form method="get" action="https://www.w3schools.com/action_page.php" autocomplete="off" novalidate>
+    <input type="email" name = "email" id="email">
+    <label for="email">email</label> <br>
+
+    <input type="text" id="test" disabled> 
+    <label for="test">test</label><br>
+
+    <select name = "num" size="2" multiple>
+      <option value="1">1</option>
+      <option value="2" selected>2</option>
+      <option value="3">3</option>
+    </select><br>
+
+    <input type="">
+
+    <textarea name="textarea" rows="5" cols = "100">312313</textarea>
+    <button>send</button> -->
+  
+  <!-- <form action="https://www.w3schools.com/action_page.php" method="">
+    <input type="text" list="data" name = "data">
+    <datalist id="data">
+      <option value="so1">so1</option>
+      <option value="so2">so2</option>
+      <option value="so3">so3</option>
+    </datalist>
+    <button>gửi</button>
+  </form> -->
+  
+</form>
+</body>
+</html>

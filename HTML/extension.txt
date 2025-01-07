@@ -1,0 +1,9 @@
+- live server
+- live preview
+- Auto rename tag
+- color highlight
+- html boilerplate
+- html snippets
+- html format
+- path intellisense
+- bracket pair color dlw
