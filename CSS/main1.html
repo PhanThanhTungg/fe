@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    /* selector{
+        property: value;
+      }
+
+      tags: p, div
+      class: .cl1, .cl2
+      id: #id1, #id2 */
+    .box1{
+      color: red;
+      color: #ffa500;
+      color: rgb(1,1,1);
+      color: rgba(1, 1, 1, 0.553);
+    }
+
+    .box2{
+      color: gray;
+      background-color: black;
+      height: 100px;
+      width: 100px;
+      overflow-y: auto; 
+      overflow-x: auto;
+      /* overflow: hidden, scroll là luôn hiện thanh scroll, auto là khi nào vượt quá thì mới hiện scroll */
+    }
+
+    .box3{
+      color: gray;
+      background-color: black;
+      min-height: 100px;
+      max-height: 250px;
+      min-width: 100px;
+      max-width: 250px;
+    }
+
+    .box4{
+      width: 500px;
+      height: 500px;
+      /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8XYVHsGvyNJZPWw02Be7WBCLZ8igyS6P72w&s");
+      background-color: black;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed; */
+      /* background-size: contain; */
+      background: black url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8XYVHsGvyNJZPWw02Be7WBCLZ8igyS6P72w&s")
+      no-repeat center / contain fixed;
+      margin-bottom: 10px;
+    }
+
+    .box5{
+      background-color: black;
+      width: 10vw;
+      height: 10vh;
+      margin-bottom: 20px;
+      /* đơn vị: px, vh(màn hình nhìn thấy), %(% so với phần tử cha) */
+    }
+
+    .box6{
+      background-color: black;
+      width: 500px;
+      height: 500px;
+    }
+
+    .box6__box61{
+      font-size: 20px;
+      height: 1em;
+      width: 1em;
+      background: white;
+      /* em phụ thuộc vào thuộc tính font-size của chính nó hoặc phần tử chứa nó */
+    }
+
+    html{
+      font-size: 62.5%;
+    }
+
+    .box7{
+      background: #000;
+      width: 10rem;
+      height: 10rem;
+      margin-top: 20px;
+      /* rem phụ thuộc vào thuộc tính font-size của thẻ html */
+    }
+
+    .box8{
+      margin-top: 20px;
+      background-color: gray;
+      width: 100px;height: 100px;
+      border: 5px solid black;
+      border-radius: 10% 20% 30% 40%;
+
+      margin: 10px; 
+      /* full margin = 10px */
+      margin: 10px 20px;
+      /* margin-top=bottom=10px, left=right=20px */
+      margin: 10px 20px 30px;
+      /* margin-top=10px, right=left=20px, 30px; */
+      margin: 10px 20px 30px 40px;
+      
+    }
+
+    .wrap9{
+      background: gray; width: 400px;height: 400px;
+    }
+
+    .wrap9__box9{
+      /* đối với thẻ block */
+      /* margin-left: auto dịch sang phải và ngược lại
+      cả left và right đều auto thì căn giữa */
+
+      /* Nếu 2 ele bị margin collaspe thì thấy margin lớn hơn
+      ví dụ cái trên có margin-bottom là 50px, cái dưới có margin-top là 100px thì lấy 100px */
+
+      /* margin có thể âm  */
+      background:black; width: 100px; height: 100px;
+      margin: 10px 0 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* box-sizing */
+    *{
+      box-sizing: border-box;
+    }
+    .box10{
+      background: black;
+      width: 10rem; height: 10rem;
+      margin: 20px auto;
+      border: 1rem solid gray;
+      color: white;
+      font-size: 1.6rem;
+      padding: 0.5rem;
+      /* content-box: chiều rộng = width, padding, margin
+      border-box: chiều rộng = width */
+    }
+
+    /* display */
+    .box11{
+      font-size: 3rem;
+    }
+    .box11__a{
+      background-color: gray;
+      display: inline-block;
+      width: 10rem;
+      height: 10rem;
+      text-decoration: none;
+      text-align: center;
+      /* display: inline, block, inline-block, none */
+    }
+
+    /* font và chữ  */
+    body{
+      font-size: 1.6rem;
+      font-family: "Roboto", serif;
+    }
+    .box12{
+      margin: 20px;
+      font-weight: 600; /* mặc định là 400 */
+      font-style: italic;
+      line-height: 1.5; /* mặc định là 1 */
+      text-align: justify;
+      word-spacing: 10px;
+      letter-spacing: 5px;
+
+      /* Hiển thị dấu... khi nội dung quá dài trong 1 hàng */
+      /* white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis; */
+
+      /* Hiển thị dấu ... khi nội dung quá dài đến hàng thứ 3 */
+      /* Một số trình duyệt hiển thị k tốt, nên dùng js */
+      /* display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis; */
+
+      word-break: break-word;/* break-all */
+      /* break-all: Cho phép ngắt dòng ở bất kỳ ký tự nào trong văn bản, ngay cả giữa các chữ cái, 
+      nếu cần để nội dung vừa với khung chứa.
+      break-word: Chỉ ngắt dòng ở khoảng trắng hoặc khi một từ quá dài để vừa trong khung chứa. 
+      Nó sẽ ưu tiên giữ nguyên từ và chỉ ngắt khi không còn lựa chọn nào khác. */
+    }
+
+    /* các css liên quan đến Hình ảnh và căn giữa */
+    .image{
+      /* max-width: 500px; */
+      width: 500px;
+      height: 500px;
+      object-fit:cover;
+      object-position: left;
+      display: block; 
+      /* căn giữa thẻ block */
+      margin: 0 auto;
+    }
+    .box13{
+      width: 600px;
+      height: 600px;
+      text-align: center;
+    }
+    .image2{
+      width: 300px;height: 300px;object-fit: cover;border-radius: 50%;
+    }
+
+    /* peseudo cơ bản */
+    .box14{
+      display: inline-block;
+      margin: 20px;
+    }
+    .box14:hover{
+      color: gray
+    }
+    .box14:active{
+      color: red
+    }
+    .box14:visited{
+      color: green;
+    }
+
+    /* background gradient */
+    .box15{
+      margin: 20px;
+      width: 12rem;
+      height: 12rem;
+      /* background-image: linear-gradient(to right, red, black); */
+      /* background-image: linear-gradient(90deg,red, black); */
+      background: linear-gradient(90deg, red 30%, black 80%);
+    }
+
+    /* text gradient */
+    .box16{
+      font-size: 4rem;
+      font-weight: 900;
+      display: inline-block;
+    }
+    @supports (-webkit-background-clip: text){
+      .box16{
+        background-image: linear-gradient(to right, red, green);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    /* 2 background: gradient+mainBackground */
+    .box17{
+      width: 300px;height: 300px;
+      background: linear-gradient(90deg, rgba(255, 255, 0, 0.599), rgba(0, 128, 0, 0.577))
+      ,url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8XYVHsGvyNJZPWw02Be7WBCLZ8igyS6P72w&s")
+      no-repeat;
+      background-size: cover;
+      
+    }
+
+  </style>
+  <div class ="box1">box1</div>
+
+  <div class="box2">
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2
+    box2box2box2 
+  </div>
+
+  <div class="box3">
+    box2box2box2box2box2box2 box2box2box2 box2box2box2 box2box2box2 
+    box2box2box2box2box2box2 box2box2box2 box2box2box2 box2box2box2 
+    box2box2box2box2box2box2 box2box2box2 box2box2box2 box2box2box2 
+    box2box2box2box2box2box2 box2box2box2 box2box2box2 box2box2box2 
+    box2box2box2box2box2box2 box2box2box2 box2box2box2 box2box2box2 
+    box2box2box2box2box2box2 
+    box2box2box2
+    box2box2box2
+    box2box2box2 
+  </div>
+
+  <div class="box4"></div>
+
+  <div class="box5"></div>
+
+  <div class="box6">
+    <div class="box6__box61"></div>
+  </div>
+
+  <div class="box7"></div>
+
+  <div class="box8"></div>
+
+  <div class="wrap9">
+    <div class="wrap9__box9"></div>
+  </div>
+
+  <!-- padding tương tự margin nhưng ko có số âm  -->
+
+  <!-- box-sizing -->
+  <div class="box10">box10</div>
+
+  <!-- display -->
+  <div class="box11">
+    đây là <a class="box11__a" href="#">link</a> fake
+  </div>
+
+  <!-- font và chữ  -->
+  <div class="box12">
+    mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font
+    mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font
+    mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font
+    mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font
+    mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font mô tả về font
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  </div>
+
+  <!-- các css liên quan đến Hình ảnh và căn giữa -->
+  <img src="https://m.media-amazon.com/images/M/MV5BNTc3N2EyNWItOTIwNC00ZTZmLWFlM2QtM2QzMjY2MWEzNzNjXkEyXkFqcGc@._V1_.jpg" alt="" class="image">
+  <div class="box13">
+    <img src="https://m.media-amazon.com/images/M/MV5BNTc3N2EyNWItOTIwNC00ZTZmLWFlM2QtM2QzMjY2MWEzNzNjXkEyXkFqcGc@._V1_.jpg" alt="" class="image2">
+  </div>
+
+  <!-- peseudo cơ bản -->
+  <a href="#" class="box14">peseudo cơ bản</a>
+
+  <!-- background gradient-->
+  <div class="box15"></div>
+
+  <!-- text gradient -->
+  <div class="box16">text gradient</div>
+
+  <!-- 2 background: gradient+mainBackground -->
+  <div class="box17"></div>
+
+
+</body>
+</html>
